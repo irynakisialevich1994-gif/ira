@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Little Web Design</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="favicon_d.png" type="image/png">
+  <link rel="stylesheet" href="selectory-home-work.css" type="text/css">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+header {
+    background: #dbeaee;
+    width: 100%;
+    margin: 0;
+}
+
+.stars-group {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.star:hover ~ .star img,
+.star:hover img{
+content: url(colored-diamond.png);
+}
+
+.star {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav {
+    width: 100%;
+    background-color: #464646;
+    height: 60px;
+}
+
+nav ul {
+    display: block;
+    text-align: center;
+    margin: 0;
+    border:none;
+    background: #464646;
+    height: 100%;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+    height: 100%;
+}
+
+nav li a {
+    font-family: 'Lato', sans-serif;
+    font-size: 2vw;
+    color: #dbeaee;
+    text-decoration: none;
+    padding: 0px 15px;
+    display: block;
+    height: 100%;
+    line-height:60px;
+}
+nav li a:hover {
+color: #425c63;
+background: #dbeaee;
+}
+
+nav li a:active{
+color:#2874a6d7 
+}
+
+h1, h2 {
+    font-family: 'Bitter', serif;
+    font-size: 3vw;
+    text-align: center;
+    color: #282828;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+body {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#body {
+    width: 55%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    text-align: center;
+    color: #464646;
+    margin: 10px 0;
+}
+div#body p:nth-of-type(3),
+div#body p:nth-of-type(4),
+div#body p:nth-of-type(5) {
+    background-color:#dbeaee;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+
+}
+div#body p:nth-of-type(3):hover,
+div#body p:nth-of-type(4):hover,
+div#body p:nth-of-type(5):hover{
+    font-weight: 900;
+    color: #FFF;
+    background: #2874a6d7 ;
+    cursor: pointer;
+} 
+
+footer {
+    width: 100%;
+    background: #464646;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+footer p{
+  color: #dbeaee ;
+}
+</style>
+<body>
+  <header>
+    <div class="stars-group">
+      <div class="star">
+          <img src="white-diamond.png" width="100">
+      </div>
+      <div class="star">
+          <img src="white-diamond.png" width="100">
+      </div>
+      <div class="star">
+          <img src="white-diamond.png" width="100">
+      </div>
+      <div class="star">
+          <img src="white-diamond.png" width="100">
+      </div>
+      <div class="star">
+          <img src="white-diamond.png" width="100">
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="">Features</a></li>
+        <li><a href="">Resources</a></li>
+        <li><a href="">Community</a></li>
+        <li><a href="">Gallery</a></li>
+        <li><a href="">Enterprise</a></li>
+        <li><a href="">Pricing</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="body">
+
+      <h1>Little Web Design Agency</h1>
+
+      <p>We are a small web design agency based in Sheffield, UK. Over the last years we've worked with many companies and made a reputation for building websites that look great and are easy-to-use.</p>
+
+      <p>We always take and shape your ideas and focus on simple, elegant and usable solutions. We bring your project to life with clean and standards-based code using the latest techniques and technologies.</p>
+
+      <h2>Our services</h2>
+
+      <p>Design</p>
+
+      <p>UI / UX</p>
+
+      <p>Content</p>
+  </div>
+  <footer>
+    <p>&#169; 2015 Little Web Design Agency</p>
+  </footer>
+
+</body>
+</html>

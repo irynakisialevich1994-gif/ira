@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    height: 100vh;         
+    margin: 0;
+}
+    .tree {
+        width: 400px;
+        height: 400px;
+        animation: hue-shift 5s linear infinite;
+    }
+    @keyframes hue-shift {
+        0%   { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+    }
+
+    </style>
+</head>
+<body>
+    <img src="Christmas tree.svg" class="tree" alt="tree">
+</body>
+</html>

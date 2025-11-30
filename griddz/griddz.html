@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Cards</title>
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .layout {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(300px, 1fr));
+          grid-template-rows: repeat(3, 300px);
+          grid-template-areas:
+            "spain bali bali" 
+            "spain egypt czech"
+            "spain turkiye italy";
+          gap: 10px;
+          max-width: 1200px;
+          margin: 20px auto;
+          padding: 10px;
+        }
+
+        .layout > div {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 24px;
+          color: rgb(12, 10, 72);
+          font-weight: 700;
+          background-size: cover;
+          background-position: center;
+          overflow: hidden;
+          transition: transform .3s ease, color .3s ease;
+        }
+
+        .layout > div::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            rgba(255,255,255,0.5),
+            rgba(255,255,255,0.5)
+          );
+          opacity: 1;
+          transition: opacity .3s ease;
+        }
+
+        .layout > div span {
+          position: relative;
+          z-index: 1;
+        }
+
+        .spain {
+          grid-area: spain;
+          background-image: url("Spain.jpg");
+        }
+
+        .bali {
+          grid-area: bali;
+          background-image: url("Bali.jpg");
+        }
+
+        .egypt {
+          grid-area: egypt;
+          background-image: url("Egypt.jpg");
+        }
+
+        .czech {
+          grid-area: czech;
+          background-image: url("Czech.jpg");
+        }
+
+        .turkiye {
+          grid-area: turkiye;
+          background-image: url("turkey.jpg");
+        }
+
+        .italy {
+          grid-area: italy;
+          background-image: url("italy.jpg");
+        }
+
+        .layout > div:hover {
+          transform: scale(1.05);
+          color: transparent;
+        }
+
+        .layout > div:hover::before {
+          opacity: 0;
+        }
+
+        @media (max-width: 768px) {
+          .layout {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 300px);
+            grid-template-areas:
+              "bali bali"
+              "spain egypt"
+              "spain czech"
+              "turkiye italy";
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+          }
+        }
+
+        @media (max-width: 456px) {
+          .layout {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 300px);
+            grid-template-areas:
+              "bali"
+              "spain"
+              "egypt"
+              "czech"
+              "turkiye"
+              "italy";
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+          }
+
+          .layout > div:hover {
+            transform: none;
+            color: rgb(12, 10, 72);
+          }
+
+          .layout > div:hover::before {
+            opacity: 1;
+          }
+        }
+    </style>
+</head>
+<body>
+
+  <div class="layout">
+    <div class="spain"><span>Испания</span></div>
+    <div class="bali"><span>Бали</span></div>
+    <div class="egypt"><span>Египет</span></div>
+    <div class="czech"><span>Чехия</span></div>
+    <div class="turkiye"><span>Турция</span></div>
+    <div class="italy"><span>Италия</span></div>
+  </div>
+
+</body>
+</html>

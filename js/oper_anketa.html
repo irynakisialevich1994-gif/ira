@@ -1,0 +1,28 @@
+<html>
+<body>
+<script>
+let lastName = prompt("Введите вашу фамилию:");
+let firstName = prompt("Введите ваше имя:");
+let middleName = prompt("Введите ваше отчество:");
+let ageYears = +prompt("Введите ваш возраст (в годах):");
+let isMale = confirm("Ваш пол - мужской? (OK - мужской, Отмена - женский)");
+
+let ageDays = ageYears * 365;
+let ageIn5Years = ageYears + 5;
+let gender = isMale ? "мужской" : "женский";
+let isRetired = (isMale && ageYears >= 65) || (!isMale && ageYears >= 60);
+let pensionStatus = isRetired ? "да" : "нет";
+
+alert(
+    (!lastName || !firstName || !middleName || !ageYears) 
+    ? "Все поля должны быть заполнены!"
+    : "ваше ФИО: " + lastName + " " + firstName + " " + middleName + "\n" +
+      "ваш возраст в годах: " + ageYears + "\n" +
+      "ваш возраст в днях: " + ageDays + "\n" +
+      "через 5 лет вам будет: " + ageIn5Years + "\n" +
+      "ваш пол: " + gender + "\n" +
+      "вы на пенсии: " + pensionStatus
+);
+</script>
+</body>
+</html>

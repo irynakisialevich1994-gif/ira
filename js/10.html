@@ -1,0 +1,48 @@
+<html>
+<body>
+<script>
+    let variable = prompt("Введите код цвета");
+    if (!variable) {
+    console.log("Введено не корректное значение");
+    } else {
+    switch (true){
+    case variable === '#ff0000':
+    case variable === '#f00':
+        console.log ("red")
+         break
+
+    case variable === '#FFA500':
+    case variable === '#ffa500':
+        console.log ("orange")
+         break
+
+    case variable === '#FFFF00':
+    case variable === '#ffff00':
+    case variable === '#ff0':
+        console.log ("yellow")
+         break
+
+    case variable === '#008000':
+        console.log ("green")
+         break
+         
+    case variable === '#00FFFF':
+    case variable === '#00ffff':
+    case variable === '#0ff':
+        console.log ("aqua")
+        break
+         
+    case variable === '#0000FF':
+    case variable === '#0000ff':
+    case variable === '#00f':
+        console.log ("blue")
+        break
+    
+    case variable === '#800080':
+        console.log ("purple")
+        break
+    }
+}
+</script>
+</body>
+</html>

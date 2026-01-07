@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+function castleDefense(archers, mages, enemies, hasDragon) {
+    let turns = 0;
+    let magesRest = 0; 
+    let castleCaptured = false;
+    while (enemies > 0 && turns < 10) {
+        turns++;
+        enemies -= archers;
+        if (magesRest === 0) {
+            enemies -= mages * 2;
+        } else {
+            magesRest = 0; 
+        }
+        if (hasDragon) {
+            enemies -= 5;
+        }
+        if (enemies <= 0) {
+            return turns;
+        }
+    }
+    if (turns >= 10 && enemies > 0) {
+        return "Замок захвачен";
+    }
+    return turns;
+}
+console.log(castleDefense(3, 2, 30, true));
+</script>
+</body>
+</html>

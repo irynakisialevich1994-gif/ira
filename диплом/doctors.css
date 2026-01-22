@@ -1,0 +1,757 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E0A611;
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Nunito', 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    z-index: 1000;
+    background: #F2AB29;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #0B0C0B;
+    padding: 12px 150px;
+}
+
+.header-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.logo-svg {
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.nav-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #0B0C0B;
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(12px, 1.2vw, 14px);
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: font-family 0.2s ease, font-weight 0.2s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+.phone-number {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #0B0C0B;
+    cursor: default;
+}
+
+.phone-digits {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.desktop-phone {
+    display: flex;
+}
+
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    z-index: 1001;
+}
+
+.burger svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 64px);
+    background: #F5C043;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    z-index: 999;
+    padding: 30px 0;
+    border-bottom: 1px solid #0B0C0B;
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu a {
+    font-size: 40px;
+    text-decoration: none;
+    color: #0B0C0B;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.mobile-menu .phone-number {
+    margin-top: 40px;
+}
+
+.title {
+    width: 100%;
+    padding: 0 150px;
+    margin: 40px 0;
+}
+
+.title h1 {
+    color: #0B0C0B;
+    font-family: 'Nunito', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.specialists-section {
+    width: 100%;
+    padding: 0 150px;
+    margin-bottom: 40px;
+}
+
+.specialists-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+}
+
+.specialist-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.specialist-image {
+    width: 100%;
+    height: 290px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.specialist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.specialist-name {
+    color: #0B0C0B;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.specialist-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail-item {
+    color: #0B0C0B;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-background {
+    width: 100%;
+    min-height: 300px;
+    padding: 40px 150px 0 150px;
+    background: url('Frame\ 2147225723.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-headlines {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-headlines h2:first-child {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0B0C0B;
+    text-align: left;
+    margin: 0 0 10px 0;
+    align-self: flex-start;
+    width: 100%;
+    max-width: 600px;
+}
+
+.footer-headlines h2:last-child {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0B0C0B;
+    text-align: left;
+    margin: 0 0 0 100px;
+    max-width: 600px;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+.footer-content-right {
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-right-columns {
+    display: flex;
+    gap: 80px;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 15px;
+}
+
+.footer-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0B0C0B;
+    margin: 0;
+}
+
+.contact-info {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.phone {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0B0C0B;
+    margin: 0;
+}
+
+.social-links {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-decoration: underline;
+}
+
+.social-links a {
+    color: #0B0C0B;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-copyright {
+    text-align: right;
+    padding-bottom: 40px;
+    width: 100%;
+}
+
+.footer-copyright p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: #0B0C0B;
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding: 12px 40px;
+    }
+    
+    .title {
+        padding: 0 40px;
+        margin: 40px 0;
+    }
+    
+    .specialists-section {
+        padding: 0 40px;
+        margin-bottom: 40px;
+    }
+    
+    .footer-background {
+        padding: 40px 40px 0 40px;
+    }
+    
+    .footer-headlines h2:last-child {
+        margin: 0 0 0 40px;
+        margin-right: 40px;
+    }
+    
+    .footer-content-right {
+        margin-top: 60px;
+    }
+    
+    .footer-headlines h2:first-child,
+    .footer-headlines h2:last-child {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 12px 24px;
+    }
+    
+    .nav-center, .desktop-phone {
+        display: none;
+    }
+    
+    .burger {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: flex;
+    }
+    
+    .title {
+        padding: 0 24px;
+        margin: 40px 0;
+    }
+    
+    .title h1 {
+        font-size: 36px;
+    }
+    
+    .specialists-section {
+        padding: 0 24px;
+        margin-bottom: 40px;
+    }
+    
+    .specialists-cards {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .footer-background {
+        padding: 40px 24px 0 24px;
+    }
+    
+    .footer-headlines {
+        align-items: flex-end;
+    }
+
+    .footer-headlines h2:first-child {
+        font-size: 32px;
+        align-self: flex-end;
+        text-align: right;
+        margin: 0 0 10px 0;
+    }
+    
+    .footer-headlines h2:last-child {
+        font-size: 20px;
+        max-width: 100%;
+        margin: 0;
+        align-self: flex-end;
+        text-align: right;
+    }
+    
+    .footer-content-right {
+        align-items: flex-end;
+        margin-top: 40px;
+    }
+    
+    .footer-right-columns {
+        flex-direction: column;
+        gap: 30px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 16px;
+        width: auto;
+        max-width: 300px;
+    }
+    
+    .footer-column {
+        width: 100%;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .footer-title {
+        text-align: right;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .contact-info {
+        text-align: right;
+    }
+
+    .phone {
+        text-align: right;
+        font-size: 16px;
+    }
+
+    .social-links {
+        text-align: right;
+        align-items: flex-end;
+        font-size: 16px;
+    }
+    
+    .social-links a {
+        text-align: right;
+        display: block;
+    }
+
+    .footer-copyright {
+        text-align: right;
+    }
+    
+    .footer-copyright p {
+        text-align: right;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 76px;
+    }
+    
+    header {
+        height: 76px;
+        padding: 12px 16px;
+    }
+    
+    .mobile-menu {
+        top: 76px;
+        height: calc(100vh - 76px);
+    }
+    
+    .title {
+        padding: 0 16px;
+        margin: 32px 0;
+    }
+    
+    .title h1 {
+        font-size: 28px;
+    }
+    
+    .specialists-section {
+        padding: 0 16px;
+        margin-bottom: 40px;
+    }
+    
+    .specialists-cards {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .specialist-name {
+        font-size: 20px;
+    }
+    
+    .detail-item {
+        font-size: 16px;
+    }
+    
+    .specialist-image {
+        height: 250px;
+    }
+    
+    .footer-background {
+        padding: 40px 16px 0 16px;
+    }
+    
+    .footer-headlines {
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .footer-headlines h2:first-child {
+        font-size: 32px;
+        text-align: left;
+        align-self: flex-start;
+        margin: 0 0 10px 0;
+        width: 100%;
+    }
+    
+    .footer-headlines h2:last-child {
+        font-size: 20px;
+        max-width: 100%;
+        margin: 0;
+        text-align: left;
+        align-self: flex-start;
+        width: 100%;
+    }
+    
+    .footer-content-right {
+        align-items: flex-start;
+        margin-top: 40px;
+        width: 100%;
+    }
+    
+    .footer-right-columns {
+        flex-direction: column;
+        gap: 30px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    
+    .footer-column {
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+        gap: 10px;
+    }
+    
+    .footer-title {
+        font-size: 20px;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .phone {
+        font-size: 16px;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .social-links {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .social-links a {
+        display: block;
+        padding: 8px 0;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .footer-copyright {
+        text-align: left;
+        padding-top: 20px;
+        width: 100%;
+    }
+    
+    .footer-copyright p {
+        font-size: 14px;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .mobile-menu a {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        padding: 0 16px;
+        margin: 24px 0;
+    }
+    
+    .title h1 {
+        font-size: 24px;
+    }
+    
+    .specialists-section {
+        padding: 0 16px;
+        margin-bottom: 40px;
+    }
+    
+    .specialist-image {
+        height: 220px;
+    }
+    
+    .specialist-name {
+        font-size: 18px;
+    }
+    
+    .detail-item {
+        font-size: 14px;
+    }
+    
+    .footer-background {
+        padding: 30px 16px 0 16px;
+    }
+    
+    .footer-headlines h2:first-child,
+    .footer-headlines h2:last-child {
+        font-size: 24px;
+    }
+    
+    .mobile-menu a {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        padding-top: 72px;
+    }
+    
+    header {
+        height: 72px;
+        padding: 8px 12px;
+    }
+    
+    .mobile-menu {
+        top: 72px;
+        height: calc(100vh - 72px);
+        padding: 20px 0;
+        gap: 20px;
+    }
+    
+    .title {
+        padding: 0 12px;
+        margin: 20px 0;
+    }
+    
+    .title h1 {
+        font-size: 20px;
+    }
+    
+    .specialists-section {
+        padding: 0 12px;
+        margin-bottom: 40px;
+    }
+    
+    .specialist-image {
+        height: 200px;
+    }
+    
+    .footer-background {
+        padding: 30px 12px 0 12px;
+    }
+    
+    .footer-headlines h2:first-child,
+    .footer-headlines h2:last-child {
+        font-size: 20px;
+    }
+    
+    .footer-title {
+        font-size: 16px;
+    }
+    
+    .phone {
+        font-size: 14px;
+    }
+    
+    .social-links {
+        font-size: 14px;
+    }
+    
+    .footer-copyright p {
+        font-size: 12px;
+    }
+    
+    .mobile-menu a {
+        font-size: 24px;
+    }
+}

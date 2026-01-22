@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VETOSPHERE - Doctors </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type ="image/x-icon">
+    <link rel="stylesheet" href="doctors.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Frame 2147225650.svg" alt="Logo" class="logo-svg">
+                </a>
+            </div>
+            <nav class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="diplom.html">Home</a></li>
+                    <li><a href="Reviews.html" class="active">Reviews</a></li>
+                    <li><a href="price.html">Price</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                </ul>
+            </nav>
+            <button class="burger" aria-label="Toggle menu" onclick="toggleMenu()">
+                <img src="burger menu-.svg" alt="Menu" class="burger-icon">
+            </button>
+            <div class="phone-number desktop-phone">
+                <span class="phone-digits">+1 234 567 890</span>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="diplom.html">Home</a>
+            <a href="Reviews.html" onclick="toggleMenu()">Reviews</a>
+            <a href="price.html" onclick="toggleMenu()">Price</a>
+            <a href="doctors.html" onclick="toggleMenu()">Doctors</a>
+            <div class="phone-number">
+                <span class="phone-digits">+1 234 567 890</span>
+            </div>
+        </div>
+    </header>
+    <div class="title">
+        <h1>Our Veterinary Team</h1>
+    </div>
+    <div class="specialists-section">
+        <h2 class="specialists-title"></h2>
+        <div class="specialists-cards">
+            <div class="specialist-card">
+                <div class="specialist-image">
+                    <img src="1d.png" alt="DR. ELENA RODRIGUEZ" title="DR. ELENA RODRIGUEZ">
+                </div>
+                <div class="specialist-content">
+                    <h3 class="specialist-name">DR. ELENA CHASE – CHIEF VETERINARIAN</h3>
+                    <div class="specialist-details">
+                        <div class="detail-item">✔ 9+ years in small animal surgery</div>
+                        <div class="detail-item">✔ Specialization: Orthodontics & Soft Tissue Surgery</div>
+                        <div class="detail-item">✔ Certification: European College of Veterinary Surgeons</div>
+                    </div>
+                </div>
+            </div>
+            <div class="specialist-card">
+                <div class="specialist-image">
+                    <img src="2m.png" alt="DR. JAMES WILSON" title="DR. JAMES WILSON">
+                </div>
+                <div class="specialist-content">
+                    <h3 class="specialist-name">DR. JAMES WILSON – SENIOR SPECIALIST</h3>
+                    <div class="specialist-details">
+                        <div class="detail-item">✔ 12 years focused exclusively on cats</div>
+                        <div class="detail-item">✔ Advanced feline internal medicine & behavior</div>
+                        <div class="detail-item">✔ International speaker on feline health</div>
+                    </div>
+                </div>
+            </div>
+            <div class="specialist-card">
+                <div class="specialist-image">
+                    <img src="3m.png" alt="DR. SARAH MILLER" title="DR. SARAH MILLER">
+                </div>
+                <div class="specialist-content">
+                    <h3 class="specialist-name">DR. SARAH MILLER – DENTAL SPECIALIST</h3>
+                    <div class="specialist-details">
+                        <div class="detail-item">✔ 15+ years in small animal surgery</div>
+                        <div class="detail-item">✔ Certified in veterinary emergency care (Dip. ECVECC)</div>
+                        <div class="detail-item">✔ 24/7 on-call for urgent cases</div>
+                    </div>
+                </div>
+            </div>
+            <div class="specialist-card">
+                <div class="specialist-image">
+                    <img src="4d.png" alt="DR. MICHAEL CHEN" title="DR. MICHAEL CHEN">
+                </div>
+                <div class="specialist-content">
+                    <h3 class="specialist-name">DR. MICHAEL CHEN – CARDIOLOGY EXPERT</h3>
+                    <div class="specialist-details">
+                        <div class="detail-item">✔ 8 years in veterinary radiology & ultrasound</div>
+                        <div class="detail-item">✔ Advanced certification in diagnostic imaging</div>
+                        <div class="detail-item">✔ Performs echocardiograms & abdominal scans</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+        <div class="footer-background">
+            <div class="footer-headlines">
+                <h2>OUR MISSION:</h2>
+                <h2>YOUR PET'S HEALTH</h2>
+            </div>
+            <div class="footer-content-right">
+                <div class="footer-right-columns">
+                    <div class="footer-column contact-column">
+                        <h3 class="footer-title">CONTACT US</h3>
+                        <div class="contact-info">
+                            <p class="phone">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="footer-column social-column">
+                        <h3 class="footer-title">FOLLOW US</h3>
+                        <div class="social-links">
+                            <a href="#">Instagram</a>
+                            <a href="#">Facebook</a>
+                            <a href="#">Telegram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>@2026 vetosphere.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
